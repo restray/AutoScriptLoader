@@ -18,7 +18,7 @@ Route::get('javascript', function () {
 
         // Transform the name into path
         $name_path = str_replace('.', '/', implode('/', $decrypted));
-        
+
     } catch (Illuminate\Contracts\Encryption\DecryptException $e) {
         return config('distribution.error');
     }

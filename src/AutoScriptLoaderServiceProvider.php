@@ -22,7 +22,6 @@ class AutoScriptLoaderServiceProvider extends ServiceProvider
             $this->bootForConsole();
         }
 
-        
         // Add helper to create the scripts link
         View::composer('*', function ($view) {
             $base_path = explode('views/', $view->getPath());
@@ -34,7 +33,7 @@ class AutoScriptLoaderServiceProvider extends ServiceProvider
 
             $parent_path = $base_path[0].'views/'.implode('/', $list_name);
 
-            if (file_exists($parent_path.'/script.js')){
+            if (file_exists($parent_path.'/script.js')) {
                 $crypt = new Encrypter(env('APP_JS_KEY'));
 
                 $encrypted_key = $crypt->encrypt($list_name);
@@ -57,7 +56,7 @@ class AutoScriptLoaderServiceProvider extends ServiceProvider
     {
         return ['autoscriptloader'];
     }
-    
+
     /**
      * Console-specific booting.
      *
