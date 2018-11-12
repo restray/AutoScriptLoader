@@ -52,6 +52,6 @@ license. Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/restray/autoscriptloader
 [link-downloads]: https://packagist.org/packages/restray/autoscriptloader
 [link-travis]: https://travis-ci.org/restray/autoscriptloader
-[link-styleci]: https://styleci.io/repos/157259649
+[link-styleci]: https://github.styleci.io/repos/157259649/shield
 [link-author]: https://github.com/restray
 [link-contributors]: ../../contributors]
