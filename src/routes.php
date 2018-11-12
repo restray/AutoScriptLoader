@@ -1,9 +1,10 @@
 <?php
-use Illuminate\Support\Facades\Input;
+
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
 
-Route::get('javascript', function(){
+Route::get('javascript', function () {
     // Init the paths values
     $views_path = config('view.paths')[0];
     $hash_parameters = Input::get('generate');
@@ -23,10 +24,10 @@ Route::get('javascript', function(){
     }
 
     // Create the file path
-    $file_path = $views_path . '/' . $name_path . '/script.js';
+    $file_path = $views_path.'/'.$name_path.'/script.js';
 
     // If the file exist
-    if (file_exists($file_path)){
+    if (file_exists($file_path)) {
         // Open it
         $file = fopen($file_path, 'r');
 
@@ -37,7 +38,7 @@ Route::get('javascript', function(){
         fclose($file);
 
         // Create the header for the JS and stock it as header on the view
-        $headers=array('Content-Type'=>'application/javascript');
+        $headers = ['Content-Type'=>'application/javascript'];
         View::share('headers', $headers);
 
         // Return the content
