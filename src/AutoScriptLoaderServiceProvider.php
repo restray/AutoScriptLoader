@@ -46,45 +46,4 @@ class AutoScriptLoaderServiceProvider extends ServiceProvider
             }
         });
     }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['autoscriptloader'];
-    }
-
-    /**
-     * Console-specific booting.
-     *
-     * @return void
-     */
-    protected function bootForConsole()
-    {
-        // Publishing the configuration file.
-        $this->publishes([
-            __DIR__.'/../config/autoscriptloader.php' => config_path('autoscriptloader.php'),
-        ], 'autoscriptloader.config');
-
-        // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/restray'),
-        ], 'autoscriptloader.views');*/
-
-        // Publishing assets.
-        /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/restray'),
-        ], 'autoscriptloader.views');*/
-
-        // Publishing the translation files.
-        /*$this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/restray'),
-        ], 'autoscriptloader.views');*/
-
-        // Registering package commands.
-        // $this->commands([]);
-    }
 }
