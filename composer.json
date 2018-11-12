@@ -1,0 +1,43 @@
+{
+    "name": "restray/autoscriptloader",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Restray",
+            "email": "contact@restray.org",
+            "homepage": "https://restray.org"
+        }
+    ],
+    "homepage": "https://github.com/restray/autoscriptloader",
+    "keywords": ["Laravel", "AutoScriptLoader"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Restray\\AutoScriptLoader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Restray\\AutoScriptLoader\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Restray\\AutoScriptLoader\\AutoScriptLoaderServiceProvider"
+            ],
+            "aliases": {
+                "AutoScriptLoader": "Restray\\AutoScriptLoader\\Facades\\AutoScriptLoader"
+            }
+        }
+    }
+}
